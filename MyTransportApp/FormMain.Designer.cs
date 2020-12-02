@@ -29,13 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.buttonBoardSearchPage = new System.Windows.Forms.Button();
             this.buttonMap = new System.Windows.Forms.Button();
             this.buttonSearchPage = new System.Windows.Forms.Button();
             this.labelStart = new System.Windows.Forms.Label();
-            this.panelSearch = new System.Windows.Forms.Panel();
-            this.buttonSearch = new System.Windows.Forms.Button();
+            this.panelConnectionSearch = new System.Windows.Forms.Panel();
+            this.comboBoxBis = new System.Windows.Forms.ComboBox();
+            this.comboBoxVon = new System.Windows.Forms.ComboBox();
+            this.buttonSearchConnections = new System.Windows.Forms.Button();
             this.radioButtonAn = new System.Windows.Forms.RadioButton();
             this.radioButtonAb = new System.Windows.Forms.RadioButton();
             this.labelAn = new System.Windows.Forms.Label();
@@ -45,30 +59,48 @@
             this.labelDatum = new System.Windows.Forms.Label();
             this.datePicker = new System.Windows.Forms.DateTimePicker();
             this.labelTo = new System.Windows.Forms.Label();
-            this.textBoxBis = new System.Windows.Forms.TextBox();
             this.labelFrom = new System.Windows.Forms.Label();
-            this.textBoxVon = new System.Windows.Forms.TextBox();
             this.buttonBackSearch = new System.Windows.Forms.PictureBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.panelConnections = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelConnections = new System.Windows.Forms.Label();
             this.tableConnections = new System.Windows.Forms.DataGridView();
-            this.labelFromTo = new System.Windows.Forms.Label();
             this.Zeit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Linie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stationen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonBackConnections = new System.Windows.Forms.PictureBox();
+            this.labelConnections = new System.Windows.Forms.Label();
+            this.labelFromTo = new System.Windows.Forms.Label();
+            this.panelBoardSearch = new System.Windows.Forms.Panel();
+            this.buttonSearchBoard = new System.Windows.Forms.Button();
+            this.comboBoxStation = new System.Windows.Forms.ComboBox();
+            this.labelStation = new System.Windows.Forms.Label();
+            this.labelBoardSearch = new System.Windows.Forms.Label();
+            this.butttonBackBoardSearch = new System.Windows.Forms.PictureBox();
+            this.panelStationBoard = new System.Windows.Forms.Panel();
+            this.tableStationBoard = new System.Windows.Forms.DataGridView();
+            this.labelStationBoardName = new System.Windows.Forms.Label();
+            this.labelStationBoard = new System.Windows.Forms.Label();
+            this.butttonBackstationBoard = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMain.SuspendLayout();
-            this.panelSearch.SuspendLayout();
+            this.panelConnectionSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBackSearch)).BeginInit();
             this.panelConnections.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableConnections)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonBackConnections)).BeginInit();
+            this.panelBoardSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.butttonBackBoardSearch)).BeginInit();
+            this.panelStationBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tableStationBoard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butttonBackstationBoard)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelMain.Controls.Add(this.buttonBoardSearchPage);
             this.panelMain.Controls.Add(this.buttonMap);
             this.panelMain.Controls.Add(this.buttonSearchPage);
             this.panelMain.Controls.Add(this.labelStart);
@@ -78,17 +110,31 @@
             this.panelMain.Size = new System.Drawing.Size(565, 637);
             this.panelMain.TabIndex = 0;
             // 
+            // buttonBoardSearchPage
+            // 
+            this.buttonBoardSearchPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBoardSearchPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(181)))));
+            this.buttonBoardSearchPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBoardSearchPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBoardSearchPage.Location = new System.Drawing.Point(26, 255);
+            this.buttonBoardSearchPage.Name = "buttonBoardSearchPage";
+            this.buttonBoardSearchPage.Size = new System.Drawing.Size(507, 68);
+            this.buttonBoardSearchPage.TabIndex = 6;
+            this.buttonBoardSearchPage.Text = "Abfahrtstafel suchen";
+            this.buttonBoardSearchPage.UseVisualStyleBackColor = false;
+            this.buttonBoardSearchPage.Click += new System.EventHandler(this.toBoardSearch);
+            // 
             // buttonMap
             // 
             this.buttonMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(181)))));
             this.buttonMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMap.Location = new System.Drawing.Point(27, 255);
+            this.buttonMap.Location = new System.Drawing.Point(27, 350);
             this.buttonMap.Name = "buttonMap";
             this.buttonMap.Size = new System.Drawing.Size(507, 68);
             this.buttonMap.TabIndex = 5;
-            this.buttonMap.Text = "Karte";
+            this.buttonMap.Text = "Karte (noch nicht verfügbar)";
             this.buttonMap.UseVisualStyleBackColor = false;
             this.buttonMap.Click += new System.EventHandler(this.toMap);
             // 
@@ -104,7 +150,7 @@
             this.buttonSearchPage.TabIndex = 4;
             this.buttonSearchPage.Text = "Verbindung suchen";
             this.buttonSearchPage.UseVisualStyleBackColor = false;
-            this.buttonSearchPage.Click += new System.EventHandler(this.toSearch);
+            this.buttonSearchPage.Click += new System.EventHandler(this.toConnectionSearch);
             // 
             // labelStart
             // 
@@ -117,43 +163,67 @@
             this.labelStart.Text = "Start Menü";
             this.labelStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelSearch
+            // panelConnectionSearch
             // 
-            this.panelSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panelSearch.Controls.Add(this.buttonSearch);
-            this.panelSearch.Controls.Add(this.radioButtonAn);
-            this.panelSearch.Controls.Add(this.radioButtonAb);
-            this.panelSearch.Controls.Add(this.labelAn);
-            this.panelSearch.Controls.Add(this.labelAb);
-            this.panelSearch.Controls.Add(this.labelTime);
-            this.panelSearch.Controls.Add(this.timePicker);
-            this.panelSearch.Controls.Add(this.labelDatum);
-            this.panelSearch.Controls.Add(this.datePicker);
-            this.panelSearch.Controls.Add(this.labelTo);
-            this.panelSearch.Controls.Add(this.textBoxBis);
-            this.panelSearch.Controls.Add(this.labelFrom);
-            this.panelSearch.Controls.Add(this.textBoxVon);
-            this.panelSearch.Controls.Add(this.buttonBackSearch);
-            this.panelSearch.Controls.Add(this.labelSearch);
-            this.panelSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSearch.Location = new System.Drawing.Point(0, 0);
-            this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(565, 637);
-            this.panelSearch.TabIndex = 6;
+            this.panelConnectionSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelConnectionSearch.Controls.Add(this.comboBoxBis);
+            this.panelConnectionSearch.Controls.Add(this.comboBoxVon);
+            this.panelConnectionSearch.Controls.Add(this.buttonSearchConnections);
+            this.panelConnectionSearch.Controls.Add(this.radioButtonAn);
+            this.panelConnectionSearch.Controls.Add(this.radioButtonAb);
+            this.panelConnectionSearch.Controls.Add(this.labelAn);
+            this.panelConnectionSearch.Controls.Add(this.labelAb);
+            this.panelConnectionSearch.Controls.Add(this.labelTime);
+            this.panelConnectionSearch.Controls.Add(this.timePicker);
+            this.panelConnectionSearch.Controls.Add(this.labelDatum);
+            this.panelConnectionSearch.Controls.Add(this.datePicker);
+            this.panelConnectionSearch.Controls.Add(this.labelTo);
+            this.panelConnectionSearch.Controls.Add(this.labelFrom);
+            this.panelConnectionSearch.Controls.Add(this.buttonBackSearch);
+            this.panelConnectionSearch.Controls.Add(this.labelSearch);
+            this.panelConnectionSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelConnectionSearch.Location = new System.Drawing.Point(0, 0);
+            this.panelConnectionSearch.Name = "panelConnectionSearch";
+            this.panelConnectionSearch.Size = new System.Drawing.Size(565, 637);
+            this.panelConnectionSearch.TabIndex = 6;
             // 
-            // buttonSearch
+            // comboBoxBis
             // 
-            this.buttonSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.buttonSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(181)))));
-            this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(27, 521);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(237, 52);
-            this.buttonSearch.TabIndex = 18;
-            this.buttonSearch.Text = "Suchen";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.toConnections);
+            this.comboBoxBis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxBis.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBis.FormattingEnabled = true;
+            this.comboBoxBis.Location = new System.Drawing.Point(27, 255);
+            this.comboBoxBis.Name = "comboBoxBis";
+            this.comboBoxBis.Size = new System.Drawing.Size(502, 39);
+            this.comboBoxBis.TabIndex = 20;
+            this.comboBoxBis.SelectionChangeCommitted += new System.EventHandler(this.OnSelectFromList);
+            this.comboBoxBis.TextChanged += new System.EventHandler(this.OnWriteFromTo);
+            // 
+            // comboBoxVon
+            // 
+            this.comboBoxVon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxVon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxVon.FormattingEnabled = true;
+            this.comboBoxVon.Location = new System.Drawing.Point(25, 163);
+            this.comboBoxVon.Name = "comboBoxVon";
+            this.comboBoxVon.Size = new System.Drawing.Size(504, 39);
+            this.comboBoxVon.TabIndex = 19;
+            this.comboBoxVon.SelectionChangeCommitted += new System.EventHandler(this.OnSelectFromList);
+            this.comboBoxVon.TextChanged += new System.EventHandler(this.OnWriteFromTo);
+            // 
+            // buttonSearchConnections
+            // 
+            this.buttonSearchConnections.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSearchConnections.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(181)))));
+            this.buttonSearchConnections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchConnections.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchConnections.Location = new System.Drawing.Point(27, 521);
+            this.buttonSearchConnections.Name = "buttonSearchConnections";
+            this.buttonSearchConnections.Size = new System.Drawing.Size(237, 52);
+            this.buttonSearchConnections.TabIndex = 18;
+            this.buttonSearchConnections.Text = "Suchen";
+            this.buttonSearchConnections.UseVisualStyleBackColor = false;
+            this.buttonSearchConnections.Click += new System.EventHandler(this.toConnections);
             // 
             // radioButtonAn
             // 
@@ -250,15 +320,6 @@
             this.labelTo.TabIndex = 9;
             this.labelTo.Text = "Bis:";
             // 
-            // textBoxBis
-            // 
-            this.textBoxBis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxBis.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBis.Location = new System.Drawing.Point(25, 255);
-            this.textBoxBis.Name = "textBoxBis";
-            this.textBoxBis.Size = new System.Drawing.Size(508, 38);
-            this.textBoxBis.TabIndex = 8;
-            // 
             // labelFrom
             // 
             this.labelFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -268,15 +329,6 @@
             this.labelFrom.Size = new System.Drawing.Size(138, 29);
             this.labelFrom.TabIndex = 7;
             this.labelFrom.Text = "Von:";
-            // 
-            // textBoxVon
-            // 
-            this.textBoxVon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxVon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxVon.Location = new System.Drawing.Point(26, 163);
-            this.textBoxVon.Name = "textBoxVon";
-            this.textBoxVon.Size = new System.Drawing.Size(508, 38);
-            this.textBoxVon.TabIndex = 6;
             // 
             // buttonBackSearch
             // 
@@ -304,7 +356,7 @@
             // 
             this.panelConnections.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelConnections.Controls.Add(this.tableConnections);
-            this.panelConnections.Controls.Add(this.pictureBox1);
+            this.panelConnections.Controls.Add(this.buttonBackConnections);
             this.panelConnections.Controls.Add(this.labelConnections);
             this.panelConnections.Controls.Add(this.labelFromTo);
             this.panelConnections.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -313,16 +365,87 @@
             this.panelConnections.Size = new System.Drawing.Size(565, 637);
             this.panelConnections.TabIndex = 7;
             // 
-            // pictureBox1
+            // tableConnections
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.toSearch);
+            this.tableConnections.AllowUserToAddRows = false;
+            this.tableConnections.AllowUserToDeleteRows = false;
+            this.tableConnections.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableConnections.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableConnections.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableConnections.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(181)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableConnections.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tableConnections.ColumnHeadersHeight = 29;
+            this.tableConnections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Zeit,
+            this.Stationen,
+            this.Gleis});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableConnections.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tableConnections.EnableHeadersVisualStyles = false;
+            this.tableConnections.GridColor = System.Drawing.Color.Black;
+            this.tableConnections.Location = new System.Drawing.Point(30, 213);
+            this.tableConnections.Name = "tableConnections";
+            this.tableConnections.RowHeadersVisible = false;
+            this.tableConnections.RowHeadersWidth = 51;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.tableConnections.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.tableConnections.RowTemplate.Height = 24;
+            this.tableConnections.Size = new System.Drawing.Size(504, 392);
+            this.tableConnections.TabIndex = 7;
+            // 
+            // Zeit
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Zeit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Zeit.HeaderText = "Zeit";
+            this.Zeit.MinimumWidth = 6;
+            this.Zeit.Name = "Zeit";
+            this.Zeit.ReadOnly = true;
+            // 
+            // Stationen
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stationen.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Stationen.HeaderText = "Stationen";
+            this.Stationen.MinimumWidth = 6;
+            this.Stationen.Name = "Stationen";
+            this.Stationen.ReadOnly = true;
+            // 
+            // Gleis
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Gleis.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Gleis.HeaderText = "Gleis";
+            this.Gleis.MinimumWidth = 6;
+            this.Gleis.Name = "Gleis";
+            this.Gleis.ReadOnly = true;
+            // 
+            // buttonBackConnections
+            // 
+            this.buttonBackConnections.Image = ((System.Drawing.Image)(resources.GetObject("buttonBackConnections.Image")));
+            this.buttonBackConnections.Location = new System.Drawing.Point(10, 10);
+            this.buttonBackConnections.Name = "buttonBackConnections";
+            this.buttonBackConnections.Size = new System.Drawing.Size(66, 50);
+            this.buttonBackConnections.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.buttonBackConnections.TabIndex = 6;
+            this.buttonBackConnections.TabStop = false;
+            this.buttonBackConnections.Click += new System.EventHandler(this.toConnectionSearch);
             // 
             // labelConnections
             // 
@@ -335,23 +458,6 @@
             this.labelConnections.Text = "Verbindungen";
             this.labelConnections.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableConnections
-            // 
-            this.tableConnections.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableConnections.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tableConnections.ColumnHeadersHeight = 29;
-            this.tableConnections.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Zeit,
-            this.Linie,
-            this.Gleis});
-            this.tableConnections.Location = new System.Drawing.Point(30, 213);
-            this.tableConnections.Name = "tableConnections";
-            this.tableConnections.RowHeadersWidth = 51;
-            this.tableConnections.RowTemplate.Height = 24;
-            this.tableConnections.Size = new System.Drawing.Size(504, 392);
-            this.tableConnections.TabIndex = 7;
-            // 
             // labelFromTo
             // 
             this.labelFromTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -363,48 +469,219 @@
             this.labelFromTo.Text = "Von x bis x\r\n";
             this.labelFromTo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Zeit
+            // panelBoardSearch
             // 
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Zeit.DefaultCellStyle = dataGridViewCellStyle22;
-            this.Zeit.HeaderText = "Zeit";
-            this.Zeit.MinimumWidth = 6;
-            this.Zeit.Name = "Zeit";
-            this.Zeit.ReadOnly = true;
+            this.panelBoardSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelBoardSearch.Controls.Add(this.buttonSearchBoard);
+            this.panelBoardSearch.Controls.Add(this.comboBoxStation);
+            this.panelBoardSearch.Controls.Add(this.labelStation);
+            this.panelBoardSearch.Controls.Add(this.labelBoardSearch);
+            this.panelBoardSearch.Controls.Add(this.butttonBackBoardSearch);
+            this.panelBoardSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBoardSearch.Location = new System.Drawing.Point(0, 0);
+            this.panelBoardSearch.Name = "panelBoardSearch";
+            this.panelBoardSearch.Size = new System.Drawing.Size(565, 637);
+            this.panelBoardSearch.TabIndex = 8;
             // 
-            // Linie
+            // buttonSearchBoard
             // 
-            this.Linie.HeaderText = "Linie";
-            this.Linie.MinimumWidth = 6;
-            this.Linie.Name = "Linie";
-            this.Linie.ReadOnly = true;
+            this.buttonSearchBoard.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonSearchBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(156)))), ((int)(((byte)(181)))));
+            this.buttonSearchBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSearchBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSearchBoard.Location = new System.Drawing.Point(34, 292);
+            this.buttonSearchBoard.Name = "buttonSearchBoard";
+            this.buttonSearchBoard.Size = new System.Drawing.Size(237, 52);
+            this.buttonSearchBoard.TabIndex = 22;
+            this.buttonSearchBoard.Text = "Suchen";
+            this.buttonSearchBoard.UseVisualStyleBackColor = false;
+            this.buttonSearchBoard.Click += new System.EventHandler(this.toStationBoard);
             // 
-            // Gleis
+            // comboBoxStation
             // 
-            this.Gleis.HeaderText = "Gleis";
-            this.Gleis.MinimumWidth = 6;
-            this.Gleis.Name = "Gleis";
-            this.Gleis.ReadOnly = true;
+            this.comboBoxStation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStation.FormattingEnabled = true;
+            this.comboBoxStation.Location = new System.Drawing.Point(32, 200);
+            this.comboBoxStation.Name = "comboBoxStation";
+            this.comboBoxStation.Size = new System.Drawing.Size(504, 39);
+            this.comboBoxStation.TabIndex = 21;
+            // 
+            // labelStation
+            // 
+            this.labelStation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStation.Location = new System.Drawing.Point(29, 168);
+            this.labelStation.Name = "labelStation";
+            this.labelStation.Size = new System.Drawing.Size(138, 29);
+            this.labelStation.TabIndex = 20;
+            this.labelStation.Text = "Station:";
+            // 
+            // labelBoardSearch
+            // 
+            this.labelBoardSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelBoardSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBoardSearch.Location = new System.Drawing.Point(27, 79);
+            this.labelBoardSearch.Name = "labelBoardSearch";
+            this.labelBoardSearch.Size = new System.Drawing.Size(509, 39);
+            this.labelBoardSearch.TabIndex = 8;
+            this.labelBoardSearch.Text = "Abfahrtstafel suchen";
+            this.labelBoardSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // butttonBackBoardSearch
+            // 
+            this.butttonBackBoardSearch.Image = ((System.Drawing.Image)(resources.GetObject("butttonBackBoardSearch.Image")));
+            this.butttonBackBoardSearch.Location = new System.Drawing.Point(10, 12);
+            this.butttonBackBoardSearch.Name = "butttonBackBoardSearch";
+            this.butttonBackBoardSearch.Size = new System.Drawing.Size(66, 50);
+            this.butttonBackBoardSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.butttonBackBoardSearch.TabIndex = 7;
+            this.butttonBackBoardSearch.TabStop = false;
+            this.butttonBackBoardSearch.Click += new System.EventHandler(this.toMain);
+            // 
+            // panelStationBoard
+            // 
+            this.panelStationBoard.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelStationBoard.Controls.Add(this.tableStationBoard);
+            this.panelStationBoard.Controls.Add(this.labelStationBoardName);
+            this.panelStationBoard.Controls.Add(this.labelStationBoard);
+            this.panelStationBoard.Controls.Add(this.butttonBackstationBoard);
+            this.panelStationBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStationBoard.Location = new System.Drawing.Point(0, 0);
+            this.panelStationBoard.Name = "panelStationBoard";
+            this.panelStationBoard.Size = new System.Drawing.Size(565, 637);
+            this.panelStationBoard.TabIndex = 9;
+            // 
+            // tableStationBoard
+            // 
+            this.tableStationBoard.AllowUserToAddRows = false;
+            this.tableStationBoard.AllowUserToDeleteRows = false;
+            this.tableStationBoard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableStationBoard.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableStationBoard.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableStationBoard.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(181)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableStationBoard.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.tableStationBoard.ColumnHeadersHeight = 29;
+            this.tableStationBoard.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableStationBoard.DefaultCellStyle = dataGridViewCellStyle11;
+            this.tableStationBoard.EnableHeadersVisualStyles = false;
+            this.tableStationBoard.GridColor = System.Drawing.Color.Black;
+            this.tableStationBoard.Location = new System.Drawing.Point(30, 213);
+            this.tableStationBoard.Name = "tableStationBoard";
+            this.tableStationBoard.RowHeadersVisible = false;
+            this.tableStationBoard.RowHeadersWidth = 51;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.tableStationBoard.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.tableStationBoard.RowTemplate.Height = 24;
+            this.tableStationBoard.Size = new System.Drawing.Size(504, 392);
+            this.tableStationBoard.TabIndex = 11;
+            // 
+            // labelStationBoardName
+            // 
+            this.labelStationBoardName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStationBoardName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStationBoardName.Location = new System.Drawing.Point(25, 129);
+            this.labelStationBoardName.Name = "labelStationBoardName";
+            this.labelStationBoardName.Size = new System.Drawing.Size(509, 39);
+            this.labelStationBoardName.TabIndex = 10;
+            this.labelStationBoardName.Text = "X";
+            this.labelStationBoardName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelStationBoard
+            // 
+            this.labelStationBoard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStationBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStationBoard.Location = new System.Drawing.Point(25, 79);
+            this.labelStationBoard.Name = "labelStationBoard";
+            this.labelStationBoard.Size = new System.Drawing.Size(509, 39);
+            this.labelStationBoard.TabIndex = 9;
+            this.labelStationBoard.Text = "Abfahrtstafel der Station";
+            this.labelStationBoard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // butttonBackstationBoard
+            // 
+            this.butttonBackstationBoard.Image = ((System.Drawing.Image)(resources.GetObject("butttonBackstationBoard.Image")));
+            this.butttonBackstationBoard.Location = new System.Drawing.Point(12, 12);
+            this.butttonBackstationBoard.Name = "butttonBackstationBoard";
+            this.butttonBackstationBoard.Size = new System.Drawing.Size(66, 50);
+            this.butttonBackstationBoard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.butttonBackstationBoard.TabIndex = 8;
+            this.butttonBackstationBoard.TabStop = false;
+            this.butttonBackstationBoard.Click += new System.EventHandler(this.toBoardSearch);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Abfahrtszeit";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Linie";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Endstation";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 637);
+            this.Controls.Add(this.panelStationBoard);
+            this.Controls.Add(this.panelBoardSearch);
             this.Controls.Add(this.panelConnections);
-            this.Controls.Add(this.panelSearch);
+            this.Controls.Add(this.panelConnectionSearch);
             this.Controls.Add(this.panelMain);
             this.MinimumSize = new System.Drawing.Size(510, 674);
             this.Name = "FormMain";
             this.Text = "Transport App";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMain.ResumeLayout(false);
-            this.panelSearch.ResumeLayout(false);
-            this.panelSearch.PerformLayout();
+            this.panelConnectionSearch.ResumeLayout(false);
+            this.panelConnectionSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.buttonBackSearch)).EndInit();
             this.panelConnections.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableConnections)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonBackConnections)).EndInit();
+            this.panelBoardSearch.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.butttonBackBoardSearch)).EndInit();
+            this.panelStationBoard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tableStationBoard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butttonBackstationBoard)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,30 +692,45 @@
         private System.Windows.Forms.Button buttonMap;
         private System.Windows.Forms.Button buttonSearchPage;
         private System.Windows.Forms.Label labelStart;
-        private System.Windows.Forms.Panel panelSearch;
+        private System.Windows.Forms.Panel panelConnectionSearch;
         private System.Windows.Forms.PictureBox buttonBackSearch;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.DateTimePicker datePicker;
         private System.Windows.Forms.Label labelTo;
-        private System.Windows.Forms.TextBox textBoxBis;
         private System.Windows.Forms.Label labelFrom;
-        private System.Windows.Forms.TextBox textBoxVon;
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.DateTimePicker timePicker;
         private System.Windows.Forms.Label labelAn;
         private System.Windows.Forms.Label labelAb;
-        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonSearchConnections;
         private System.Windows.Forms.RadioButton radioButtonAn;
         private System.Windows.Forms.RadioButton radioButtonAb;
         private System.Windows.Forms.Panel panelConnections;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox buttonBackConnections;
         private System.Windows.Forms.Label labelConnections;
         private System.Windows.Forms.DataGridView tableConnections;
         private System.Windows.Forms.Label labelFromTo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Zeit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Linie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stationen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
+        private System.Windows.Forms.ComboBox comboBoxVon;
+        private System.Windows.Forms.ComboBox comboBoxBis;
+        private System.Windows.Forms.Button buttonBoardSearchPage;
+        private System.Windows.Forms.Panel panelBoardSearch;
+        private System.Windows.Forms.PictureBox butttonBackBoardSearch;
+        private System.Windows.Forms.Label labelBoardSearch;
+        private System.Windows.Forms.Button buttonSearchBoard;
+        private System.Windows.Forms.ComboBox comboBoxStation;
+        private System.Windows.Forms.Label labelStation;
+        private System.Windows.Forms.Panel panelStationBoard;
+        private System.Windows.Forms.DataGridView tableStationBoard;
+        private System.Windows.Forms.Label labelStationBoardName;
+        private System.Windows.Forms.Label labelStationBoard;
+        private System.Windows.Forms.PictureBox butttonBackstationBoard;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
 
